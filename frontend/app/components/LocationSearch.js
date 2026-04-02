@@ -86,7 +86,7 @@ export default function LocationSearch({ onLocationSelect, defaultLocation = "De
     // 2. Fallback: Gemini AI to resolve coordinates
     setResolveStatus('Using AI to locate...');
     try {
-      const res = await fetch('http://localhost:8000/api/ai/geocode', {
+      const res = await fetch('/api/ai/geocode', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ location: placeName })

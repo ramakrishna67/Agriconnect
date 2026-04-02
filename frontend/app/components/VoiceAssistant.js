@@ -34,7 +34,7 @@ export default function VoiceAssistant() {
     setMessages(prev => [...prev, { role: 'assistant', text: 'Thinking...', loading: true }]);
 
     try {
-      const res = await fetch('http://localhost:8000/api/ai/voice', {
+      const res = await fetch('/api/ai/voice', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text, language: lang })
