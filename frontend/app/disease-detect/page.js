@@ -64,7 +64,7 @@ export default function DiseaseDetectPage() {
       <div className="container">
         <div className="page-header">
           <h1>🔬 Crop Disease Detection</h1>
-          <p>Upload a photo of your crop for instant AI-powered disease diagnosis using our CNN model</p>
+          {/* <p>Upload a photo of your crop for instant AI-powered disease diagnosis using our CNN model</p> */}
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, alignItems: 'start' }}>
           <div className="glass-card">
@@ -93,11 +93,11 @@ export default function DiseaseDetectPage() {
               </button>
               {selectedFile && <button className="btn btn-secondary" onClick={() => { setSelectedFile(null); setPreview(null); setResult(null); }}>Reset</button>}
             </div>
-            <div style={{ marginTop: 20, fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+            {/* <div style={{ marginTop: 20, fontSize: '0.82rem', color: 'var(--text-muted)' }}>
               <div>● Model: CNN (MobileNetV2 Transfer Learning)</div>
               <div style={{ marginTop: 4 }}>● Dataset: PlantVillage (16 classes)</div>
               <div style={{ marginTop: 4 }}>● Crops: Tomato, Potato, Pepper (Bell)</div>
-            </div>
+            </div> */}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {!result && !loading && !error && (
@@ -128,7 +128,7 @@ export default function DiseaseDetectPage() {
                   </div>
                   <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
                     <span className={`badge ${result.severity === 'High' ? 'badge-danger' : result.severity === 'Medium' ? 'badge-warning' : 'badge-success'}`}>Severity: {result.severity}</span>
-                    <span className="badge badge-info">Model: {result.model_info.model}</span>
+                    {/* <span className="badge badge-info">Model: {result.model_info.model}</span> */}
                   </div>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.7 }}>{result.description}</p>
                 </div>
